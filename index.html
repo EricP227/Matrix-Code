@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Text Effects</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .effect1 {
+      animation: textGlow 3s ease-in-out infinite;
+    }
+
+    .effect2 {
+      animation: textWave 2s ease-in-out infinite;
+    }
+
+    .effect3 {
+      animation: textRotate 4s linear infinite;
+    }
+
+    .effect4 {
+      animation: textBounce 1.5s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+      0%, 100% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+      }
+      50% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 25px #00ff00, 0 0 30px #00ff00;
+      }
+    }
+
+    @keyframes textWave {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(10px);
+      }
+    }
+
+    @keyframes textRotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes textBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1 class="effect1">Glowing Effect</h1>
+    <h1 class="effect2">Waving Effect</h1>
+    <h1 class="effect3">Rotating Effect</h1>
+    <h1 class="effect4">Bouncing Effect</h1>
+  </div>
+</body>
+</html>
